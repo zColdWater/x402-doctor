@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zcoldwater.github.io/x402-doctor/sitemap.xml

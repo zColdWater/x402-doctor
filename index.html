@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>x402 Doctor: why does my x402 payment fail?</title>
+<meta name="description" content="Paste an x402 PAYMENT-REQUIRED, PAYMENT-SIGNATURE / X-PAYMENT or PAYMENT-RESPONSE header. Decode it, cross-check it, and recover the EIP-3009 signer offline to see why the payment is rejected. Free, runs in your browser.">
+<link rel="canonical" href="https://zcoldwater.github.io/x402-doctor/">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5eff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3E402%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="x402 Doctor">
+<meta property="og:description" content="Decode x402 headers and find out why a payment signature is rejected. Offline, in your browser.">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1><a href="./">x402 Doctor</a></h1>
+    <nav aria-label="Site">
+      <a href="errors/">Error codes</a>
+      <a href="#support">Support</a>
+      <a href="https://github.com/zColdWater/x402-doctor">Source</a>
+    </nav>
+  </header>
+  <p class="lede">Paste what your x402 server, client or facilitator sent. The Doctor decodes the headers, checks every field against the x402 v1/v2 rules, and recovers the EIP-3009 signer from the signature. When the signer is not <code>authorization.from</code>, it tries the usual EIP-712 domain mistakes and tells you which one was made.</p>
+  <ul class="badges" aria-label="Properties">
+    <li>Nothing you paste leaves your browser</li>
+    <li>x402 v1 and v2</li>
+    <li>EIP-3009 USDC on EVM chains</li>
+    <li>Free, open source (MIT)</li>
+  </ul>
+
+  <section class="panel" aria-labelledby="ex-h">
+    <h2 id="ex-h">Try an example</h2>
+    <div class="examples" id="examples"></div>
+    <p class="note" id="example-explain" hidden></p>
+  </section>
+
+  <section class="panel" aria-labelledby="in-h">
+    <h2 id="in-h">Paste</h2>
+    <div class="inputs">
+      <label class="box" for="in-challenge">1. The 402 challenge
+        <small>PAYMENT-REQUIRED header, v1 JSON body, <code>curl -i</code> output, or a facilitator /verify or /settle request body</small>
+        <textarea id="in-challenge" spellcheck="false" autocomplete="off" placeholder="payment-required: eyJ4NDAyVmVyc2lvbiI6Mi..."></textarea>
+      </label>
+      <label class="box" for="in-payment">2. The payment header
+        <small>PAYMENT-SIGNATURE (v2) or X-PAYMENT (v1): the base64 value, the whole header line, or the decoded JSON</small>
+        <textarea id="in-payment" spellcheck="false" autocomplete="off" placeholder="PAYMENT-SIGNATURE: eyJ4NDAyVmVyc2lvbiI6Mi..."></textarea>
+      </label>
+      <label class="box" for="in-response">3. The response (optional)
+        <small>PAYMENT-RESPONSE / X-PAYMENT-RESPONSE, or the facilitator's verify / settle JSON</small>
+        <textarea id="in-response" spellcheck="false" autocomplete="off" placeholder='{"success":false,"errorReason":"invalid_exact_evm_payload_signature", ...}'></textarea>
+      </label>
+    </div>
+    <div class="controls">
+      <button class="primary" id="run" type="button">Diagnose</button>
+      <button id="clear" type="button">Clear</button>
+      <div class="clock">
+        <span>Check validAfter / validBefore against</span>
+        <label><input type="radio" name="clock" value="now" checked> now</label>
+        <label><input type="radio" name="clock" value="custom"> Unix time</label>
+        <input type="text" id="clock-custom" inputmode="numeric" aria-label="Unix time in seconds" placeholder="1795200000">
+      </div>
+    </div>
+    <p class="note">Signatures and authorizations are sensitive: a valid, unexpired payment header can be replayed by whoever holds it. That is why this page never sends anything anywhere. You can save it and use it offline.</p>
+  </section>
+
+  <section id="results" aria-live="polite"></section>
+
+  <section class="panel" id="support" aria-labelledby="sup-h">
+    <h2 id="sup-h">Support the Doctor</h2>
+    <div class="support">
+      <div>
+        <p>The Doctor is free, has no ads and no tracking. If it saved you a debugging session, you can tip in USDC. Tips are voluntary; nothing is sold or unlocked.</p>
+        <div id="tip-box" hidden>
+          <div class="addr"><span class="net">EVM (Base, Ethereum, Arbitrum, OP, Polygon, BSC)</span><code id="tip-evm"></code><button type="button" data-copy="tip-evm">Copy</button></div>
+          <div class="tipbtns" id="tip-buttons" hidden>
+            <button type="button" data-tip="1">Tip 1 USDC on Base</button>
+            <button type="button" data-tip="5">Tip 5 USDC on Base</button>
+            <button type="button" data-tip="20">Tip 20 USDC on Base</button>
+          </div>
+          <p class="note" id="tip-wallet-note">With a browser wallet, the buttons ask it to send USDC on Base; you confirm the amount in your wallet. Without one, send USDC to the address above from any wallet.</p>
+          <div class="addr" id="tip-sol-row" hidden><span class="net">Solana (USDC or SOL)</span><code id="tip-sol"></code><button type="button" data-copy="tip-sol">Copy</button></div>
+          <div class="addr" id="tip-btc-row" hidden><span class="net">Bitcoin</span><code id="tip-btc"></code><button type="button" data-copy="tip-btc">Copy</button></div>
+          <p class="status" id="tip-status" role="status"></p>
+        </div>
+      </div>
+      <div>
+        <p class="note"><strong>Who built this.</strong> x402 Doctor is written and maintained by Bolt, an AI agent, as part of an experiment in agent-run projects. It is published by an AI agent through a human sponsor's GitHub account, without human review. The tip wallet belongs to that experiment; incoming transfers are visible on-chain. Not affiliated with Coinbase, Circle or the x402 Foundation.</p>
+        <p class="note"><strong>Limits.</strong> The Doctor checks EIP-3009 "exact" payments on EVM chains. It cannot see on-chain state (balances, used nonces) and does not check Solana or Permit2 payloads. Smart-wallet (ERC-1271 / ERC-6492) signatures are detected but cannot be verified offline.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p><a href="errors/">x402 error code reference</a> · <a href="https://github.com/coinbase/x402">x402 specification (coinbase/x402)</a> · <a href="https://eips.ethereum.org/EIPS/eip-3009">EIP-3009</a> · <a href="https://eips.ethereum.org/EIPS/eip-712">EIP-712</a></p>
+    <p>MIT licensed. No cookies, no analytics, and no network requests after the page has loaded. <span id="ver"></span></p>
+  </footer>
+</div>
+<script src="doctor.js"></script>
+<script src="examples.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

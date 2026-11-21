@@ -1,0 +1,201 @@
+{
+ "payer": "0x9cccd29d253eF098cB77065692dC536db260bf4F",
+ "seller": "0x2Cca1e8BA78d0f8096EbDd5A00171daBB4A464DE",
+ "examples": [
+  {
+   "id": "ok",
+   "title": "Valid v2 payment",
+   "explain": "A correct x402 v2 challenge, payment and settlement on Base.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "HTTP/2 402\ncontent-type: application/json\npayment-required: eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=\naccess-control-expose-headers: PAYMENT-REQUIRED, PAYMENT-RESPONSE\n\n{}",
+    "payment": "PAYMENT-SIGNATURE: eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHgyMGRkZjhjYzY0ZTRlNWNlODlhMDVmM2NmYzAwODFkZGVlY2M4NWY4MGFhYmY1OTdiODljNjZkNDYzN2M1NWYxMDQ4ZjUyMDFiMDkxMmMzZTQ2MTA1MzVmZTkxZDVkNDEwZTcxZjY3MzNlZTY3ZjY3YWVmMzViMjM2ODEzMTljODFiIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4YzA4Y2I0YmJjZWJlNmZlYTAwN2FkODVjMTQyNjUxOWU2MzRhODI0YjI4NTU0NGI4YjFhMzQ3MjU2ZTQyODc5YyJ9fX0=",
+    "response": "PAYMENT-RESPONSE: eyJzdWNjZXNzIjp0cnVlLCJ0cmFuc2FjdGlvbiI6IjB4YWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYmFiYWJhYiIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsInBheWVyIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIn0="
+   },
+   "expect": {
+    "verdict": "ok",
+    "signature": "valid"
+   }
+  },
+  {
+   "id": "wrong-name",
+   "title": "Wrong token name in the EIP-712 domain",
+   "explain": "The client signed with name \"USDC\" (the Base Sepolia token) for Base mainnet USDC, whose name is \"USD Coin\". The facilitator answers invalid_exact_evm_payload_signature.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHgxMjcwZmRlNWQ0YmEyZGUxZmI1MTdkY2Y0MWI3YWYzOWYwYWM2NzVjOTUyNzQ4MDg1NGZiOTUxZGU1Y2QyYWVlMjU0YzMxZDBmNDM5NWY2YTNhZmQ5YjI5ZDFlY2ZkMGI3ZTk0ZGEyY2Y1Y2M5MzBjNmIzM2FjMTM4ODUwYTNiMzFjIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4YzA4Y2I0YmJjZWJlNmZlYTAwN2FkODVjMTQyNjUxOWU2MzRhODI0YjI4NTU0NGI4YjFhMzQ3MjU2ZTQyODc5YyJ9fX0=",
+    "response": "{\"success\":false,\"errorReason\":\"invalid_exact_evm_payload_signature\",\"transaction\":\"\",\"network\":\"eip155:8453\"}"
+   },
+   "expect": {
+    "verdict": "problems",
+    "signature": "mismatch_found",
+    "diff": "name \"USDC\"",
+    "codes": [
+     "invalid_exact_evm_payload_signature"
+    ]
+   }
+  },
+  {
+   "id": "testnet-domain",
+   "title": "Signed for Base Sepolia, sent to Base",
+   "explain": "The wallet was still on Base Sepolia: chainId 84532 and the testnet USDC contract are in the signed domain.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHhiMmY1NDY1YWNmNjZkZmVlYTg2ZTA2MzEzMjI1ZDgwODAzYzkxMDBkYTNmYjgwYmViMzY2ZmFiNzRjMjRjMTAwNzdkM2E2NzUyM2Y3NWMzNWE1ZDViYzYxNDFiMTgwYTYxNGZiNTdmODRjYjU5M2Q3NTAzYWU2ZDZlMTU3OWZhMDFjIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4YzA4Y2I0YmJjZWJlNmZlYTAwN2FkODVjMTQyNjUxOWU2MzRhODI0YjI4NTU0NGI4YjFhMzQ3MjU2ZTQyODc5YyJ9fX0="
+   },
+   "expect": {
+    "verdict": "problems",
+    "signature": "mismatch_found",
+    "diff": "chainId 84532"
+   }
+  },
+  {
+   "id": "server-extra",
+   "title": "Server advertises the wrong extra.name",
+   "explain": "The seller's challenge says extra.name \"USDC\" for Base mainnet USDC. Every client that trusts it signs the wrong domain, so every payment fails. Seen from the facilitator request body the seller logs.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "{\n  \"x402Version\": 2,\n  \"paymentPayload\": {\n    \"x402Version\": 2,\n    \"resource\": {\n      \"url\": \"https://api.example.com/v1/weather?city=Lisbon\"\n    },\n    \"accepted\": {\n      \"scheme\": \"exact\",\n      \"network\": \"eip155:8453\",\n      \"amount\": \"10000\",\n      \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\n      \"payTo\": \"0x2Cca1e8BA78d0f8096EbDd5A00171daBB4A464DE\",\n      \"maxTimeoutSeconds\": 60,\n      \"extra\": {\n        \"name\": \"USDC\",\n        \"version\": \"2\"\n      }\n    },\n    \"payload\": {\n      \"signature\": \"0x1270fde5d4ba2de1fb517dcf41b7af39f0ac675c9527480854fb951de5cd2aee254c31d0f4395f6a3afd9b29d1ecfd0b7e94da2cf5cc930c6b33ac138850a3b31c\",\n      \"authorization\": {\n        \"from\": \"0x9cccd29d253eF098cB77065692dC536db260bf4F\",\n        \"to\": \"0x2Cca1e8BA78d0f8096EbDd5A00171daBB4A464DE\",\n        \"value\": \"10000\",\n        \"validAfter\": \"1795199400\",\n        \"validBefore\": \"1795200060\",\n        \"nonce\": \"0xc08cb4bbcebe6fea007ad85c1426519e634a824b285544b8b1a347256e42879c\"\n      }\n    }\n  },\n  \"paymentRequirements\": {\n    \"scheme\": \"exact\",\n    \"network\": \"eip155:8453\",\n    \"amount\": \"10000\",\n    \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\n    \"payTo\": \"0x2Cca1e8BA78d0f8096EbDd5A00171daBB4A464DE\",\n    \"maxTimeoutSeconds\": 60,\n    \"extra\": {\n      \"name\": \"USDC\",\n      \"version\": \"2\"\n    }\n  }\n}",
+    "payment": "",
+    "response": ""
+   },
+   "expect": {
+    "verdict": "problems",
+    "signature": "mismatch_found",
+    "codes": [
+     "invalid_exact_evm_payload_signature"
+    ],
+    "check": "extra.name"
+   }
+  },
+  {
+   "id": "v-zero",
+   "title": "Signature with v = 0/1",
+   "explain": "Some signing libraries return the recovery id (0/1) as v. USDC's signature check wants 27/28.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHg2Y2MxNWYyMmFlYjdmNjU3NWFiMjg4ZTMwMmYxZTFkYWZhMzM2YjAzZDQ1YzA1YmNiNjkzYjY3YWVlNGMzNDQ3MWI0MzBlNTExNzM0NjQ0ZWFhM2NkNjQ5ZjIzOWI2NjkxMzNmNDQ2ODE5MzhiMTIyMTRkOWM4ZWNlYzVlMWE5ZTAwIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4ZGMxNDViZGJkZTJlNTc0N2RjOTgwYjRhMWViOWE2N2RlMWVlNWU4MDA4ZDFjZDhhZjg2Y2ExMzQzMDhjMDBkOCJ9fX0="
+   },
+   "expect": {
+    "verdict": "warnings",
+    "signature": "valid",
+    "check": "signature.v"
+   }
+  },
+  {
+   "id": "milliseconds",
+   "title": "Timestamps in milliseconds",
+   "explain": "validAfter/validBefore were built with Date.now() (milliseconds). EIP-3009 uses Unix seconds, so the authorization is \"not valid yet\" for ~50,000 years.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHhlNWQ2ZjY5ZGRjMDA1YjJlOWYzMTY2YTk4M2RlNjkwMWFkNGM5OGQ5ZGU0MTUxMDEzNTFiODQ5ZjIzMzEwMjRhNTIzMzZkZWM2NDMyMjg1N2RkZjI2OWQ2ODM2ZDIyNWIzZWY2YmE4OWZlZGQzODIyOTU0MmFhNDhiOWM5NTM4NDFjIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAwMDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAwMDAiLCJub25jZSI6IjB4YzhmNmM4YWRiMjY3OGEyNjFiMDI5MDM4ZWYxMDIwZDc5NTRjOTQ0YTliNTgxZjI4OTkwZDU4Yzc1OWY0Y2I4NCJ9fX0="
+   },
+   "expect": {
+    "verdict": "problems",
+    "codes": [
+     "invalid_exact_evm_payload_authorization_valid_after"
+    ]
+   }
+  },
+  {
+   "id": "expired",
+   "title": "Expired payment header",
+   "explain": "A cached PAYMENT-SIGNATURE was replayed an hour later.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHg2Y2IzYzVhZmFkZmVmNzAyYjA4NjJlNTNiNzRjNGVkOWE2OTI5YTQwNzcxYjU5NDZlNTg4MmZkYTgyOTEzM2JmNGUwNTg0Zjc2MjdlZGZlNzkwNmZhODg1NGY5NjZlNzdlM2UyOWY0MjkzOTU1OGU4MWRjODRjOTkwYjdiMWMzNjFiIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTYwMDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUxOTY0NjAiLCJub25jZSI6IjB4Y2FlMGJiY2EwOGIwNzU1OTU2MzBjZTRiODZiNWRlZDU5Yzg3OTE2Y2Y3ZmQyNWZlM2ZjNDQ2ODJiZTcwYjUzNCJ9fX0="
+   },
+   "expect": {
+    "verdict": "problems",
+    "codes": [
+     "invalid_exact_evm_payload_authorization_valid_before"
+    ]
+   }
+  },
+  {
+   "id": "mismatch",
+   "title": "Paid the wrong amount to the wrong address",
+   "explain": "The signature is fine, but it authorizes $10.00 to a different address: the client used dollars instead of atomic units and a cached payTo.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4YUQ0Q2RCMDNCMWRBM2U4QTczODYzQjhjNTEyNjc4QzM1ZThjRjY0MSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHgzNjMwNmI5NGM0MmM4MWMyYzk2NTMyMjgxMWU1NTA1ZWJhNzc2ZDMzNmE3OTViODUxODUzYTE5OThiMzI4ZWM3N2QxMTk5ZjI4MTBhODI4NThhYTQ2MTY3MDQ0N2Y2NjkzMTMwOThiYWVjOWNlYTIxNWUwYWZkNDMwYjJhMDQ5ZDFiIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweGFENENkQjAzQjFkQTNlOEE3Mzg2M0I4YzUxMjY3OEMzNWU4Y0Y2NDEiLCJ2YWx1ZSI6IjEwMDAwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4Mjk5YTUzMzE5ZTRlZmE4Mjk2OWI2OTBiZGEyZWIxYmE5NjZiYmM0MWYxM2M4ODBhNzBjZTc4MTlkNDg3YWY3MiJ9fX0="
+   },
+   "expect": {
+    "verdict": "problems",
+    "signature": "valid",
+    "codes": [
+     "invalid_exact_evm_payload_recipient_mismatch",
+     "invalid_exact_evm_payload_authorization_value_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "no-accepted",
+   "title": "v2 payload without \"accepted\", in X-PAYMENT",
+   "explain": "A hand-rolled client sends the v2 payload in the v1 header and leaves out \"accepted\".",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "X-PAYMENT: eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJwYXlsb2FkIjp7InNpZ25hdHVyZSI6IjB4MjBkZGY4Y2M2NGU0ZTVjZTg5YTA1ZjNjZmMwMDgxZGRlZWNjODVmODBhYWJmNTk3Yjg5YzY2ZDQ2MzdjNTVmMTA0OGY1MjAxYjA5MTJjM2U0NjEwNTM1ZmU5MWQ1ZDQxMGU3MWY2NzMzZWU2N2Y2N2FlZjM1YjIzNjgxMzE5YzgxYiIsImF1dGhvcml6YXRpb24iOnsiZnJvbSI6IjB4OWNjY2QyOWQyNTNlRjA5OGNCNzcwNjU2OTJkQzUzNmRiMjYwYmY0RiIsInRvIjoiMHgyQ2NhMWU4QkE3OGQwZjgwOTZFYkRkNUEwMDE3MWRhQkI0QTQ2NERFIiwidmFsdWUiOiIxMDAwMCIsInZhbGlkQWZ0ZXIiOiIxNzk1MTk5NDAwIiwidmFsaWRCZWZvcmUiOiIxNzk1MjAwMDYwIiwibm9uY2UiOiIweGMwOGNiNGJiY2ViZTZmZWEwMDdhZDg1YzE0MjY1MTllNjM0YTgyNGIyODU1NDRiOGIxYTM0NzI1NmU0Mjg3OWMifX19"
+   },
+   "expect": {
+    "verdict": "problems",
+    "codes": [
+     "invalid_payload",
+     "invalid_x402_version"
+    ]
+   }
+  },
+  {
+   "id": "v1-network",
+   "title": "v1 challenge with a v2 network id",
+   "explain": "A v1 server advertises network \"eip155:8453\"; v1 clients expect \"base\" and cannot match the option.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "HTTP/2 402\ncontent-type: application/json\n\n{\n  \"x402Version\": 1,\n  \"error\": \"X-PAYMENT header is required\",\n  \"accepts\": [\n    {\n      \"scheme\": \"exact\",\n      \"network\": \"eip155:8453\",\n      \"maxAmountRequired\": \"5000\",\n      \"resource\": \"https://api.example.com/v1/quote\",\n      \"description\": \"Quote\",\n      \"mimeType\": \"application/json\",\n      \"payTo\": \"0x2Cca1e8BA78d0f8096EbDd5A00171daBB4A464DE\",\n      \"maxTimeoutSeconds\": 60,\n      \"asset\": \"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\n      \"extra\": {\n        \"name\": \"USD Coin\",\n        \"version\": \"2\"\n      }\n    }\n  ]\n}",
+    "payment": "X-PAYMENT: eyJ4NDAyVmVyc2lvbiI6MSwic2NoZW1lIjoiZXhhY3QiLCJuZXR3b3JrIjoiYmFzZSIsInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHg1ODIxMTA5OTI5ZWQ2Yjc3MjM1ZmIxNGRiMDAyNTkyZGUxYTYzNjMxM2MwYzhkMzNmYWQ4ZTRhNzIwNjg2MGNjNGY5NjY0YTlmYzgzM2JkNWJmMGViYWZiZGY5MmJhNTVkYzI2YzA4MzM1ZTgzYzM1ZWE0YTlhY2UzNjgwZDcxNzFiIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjUwMDAiLCJ2YWxpZEFmdGVyIjoiMTc5NTE5OTQwMCIsInZhbGlkQmVmb3JlIjoiMTc5NTIwMDA2MCIsIm5vbmNlIjoiMHg3ODdlM2NlMjJjZjg2Y2JiNmY0MWNjY2E1ZDU5N2MwNzg1Yjg3ZjU4MThjNzY4NTViM2NkNjkyNjhjNjc1NzUyIn19fQ=="
+   },
+   "expect": {
+    "verdict": "problems",
+    "codes": [
+     "invalid_network"
+    ]
+   }
+  },
+  {
+   "id": "smart-wallet",
+   "title": "Smart-wallet (ERC-6492) signature",
+   "explain": "A counterfactual smart wallet produced a wrapped signature. It cannot be recovered like an EOA signature.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNDE0MTQxNjQ5MjY0OTI2NDkyNjQ5MjY0OTI2NDkyNjQ5MjY0OTI2NDkyNjQ5MjY0OTI2NDkyNjQ5MjY0OTI2NDkyNjQ5MiIsImF1dGhvcml6YXRpb24iOnsiZnJvbSI6IjB4OWNjY2QyOWQyNTNlRjA5OGNCNzcwNjU2OTJkQzUzNmRiMjYwYmY0RiIsInRvIjoiMHgyQ2NhMWU4QkE3OGQwZjgwOTZFYkRkNUEwMDE3MWRhQkI0QTQ2NERFIiwidmFsdWUiOiIxMDAwMCIsInZhbGlkQWZ0ZXIiOiIxNzk1MTk5NDAwIiwidmFsaWRCZWZvcmUiOiIxNzk1MjAwMDYwIiwibm9uY2UiOiIweDQ0ZmZkZTNiMWY5MTUwNDM3NzUzMDY5MDVhZGYxMjhkNmVmZWQwNTg1OTZiMzMwNzdlOWM3YjM4NjY3ZWI3NmQifX19"
+   },
+   "expect": {
+    "verdict": "warnings",
+    "check": "payment.signature"
+   }
+  },
+  {
+   "id": "receive-type",
+   "title": "Wrong primary type",
+   "explain": "The client signed ReceiveWithAuthorization. x402 \"exact\" on EVM settles with transferWithAuthorization, so the signature does not verify.",
+   "now": 1795200000,
+   "texts": {
+    "challenge": "eyJ4NDAyVmVyc2lvbiI6MiwiZXJyb3IiOiJQYXltZW50IHJlcXVpcmVkIiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiIsImRlc2NyaXB0aW9uIjoiQ3VycmVudCB3ZWF0aGVyIGZvciBvbmUgY2l0eSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRzIjpbeyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX1dLCJleHRlbnNpb25zIjp7ImJhemFhciI6eyJpbmZvIjp7ImlucHV0Ijp7InR5cGUiOiJodHRwIiwibWV0aG9kIjoiR0VUIiwicXVlcnlQYXJhbXMiOnsiY2l0eSI6Ikxpc2JvbiJ9fSwib3V0cHV0Ijp7InR5cGUiOiJqc29uIiwiZXhhbXBsZSI6eyJ0ZW1wQyI6MTh9fX19fX0=",
+    "payment": "eyJ4NDAyVmVyc2lvbiI6MiwicmVzb3VyY2UiOnsidXJsIjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5jb20vdjEvd2VhdGhlcj9jaXR5PUxpc2JvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MyIsImFtb3VudCI6IjEwMDAwIiwiYXNzZXQiOiIweDgzMzU4OWZDRDZlRGI2RTA4ZjRjN0MzMkQ0ZjcxYjU0YmRBMDI5MTMiLCJwYXlUbyI6IjB4MkNjYTFlOEJBNzhkMGY4MDk2RWJEZDVBMDAxNzFkYUJCNEE0NjRERSIsIm1heFRpbWVvdXRTZWNvbmRzIjo2MCwiZXh0cmEiOnsibmFtZSI6IlVTRCBDb2luIiwidmVyc2lvbiI6IjIifX0sInBheWxvYWQiOnsic2lnbmF0dXJlIjoiMHhkMmE1NDE5YzFkZmVkY2Y5MDE0YWM0N2VlNGY0MTBmN2YxMjczZTViZGNjNDhlZDY4MDNlZTgwZWNiMDE2ZDFlNjY1NjFkNDlmYzVmMWU2YmFmNWRlMTUwZmNmNzUzZDI1MjQ1ZGQ4NTU3ZGNlNjk1NzE2NzgxNDgwZWU1NzIzODFjIiwiYXV0aG9yaXphdGlvbiI6eyJmcm9tIjoiMHg5Y2NjZDI5ZDI1M2VGMDk4Y0I3NzA2NTY5MmRDNTM2ZGIyNjBiZjRGIiwidG8iOiIweDJDY2ExZThCQTc4ZDBmODA5NkViRGQ1QTAwMTcxZGFCQjRBNDY0REUiLCJ2YWx1ZSI6IjEwMDAwIiwidmFsaWRBZnRlciI6IjE3OTUxOTk0MDAiLCJ2YWxpZEJlZm9yZSI6IjE3OTUyMDAwNjAiLCJub25jZSI6IjB4NTczMWM5ZjU0NGJhNDdlYmE3MjAwNWY2ODhmZTk1ZmU0MTdkNGZhNDEzZGQ0NGI1MzY3MmNkNDA2Y2UwMjM4ZCJ9fX0="
+   },
+   "expect": {
+    "verdict": "problems",
+    "signature": "mismatch_found",
+    "diff": "ReceiveWithAuthorization"
+   }
+  }
+ ]
+}

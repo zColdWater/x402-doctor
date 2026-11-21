@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://zcoldwater.github.io/x402-doctor/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/insufficient_funds.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_exact_evm_payload_authorization_valid_after.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_exact_evm_payload_authorization_valid_before.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_exact_evm_payload_authorization_value_mismatch.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_exact_evm_payload_signature.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_exact_evm_payload_recipient_mismatch.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_network.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_payload.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_payment_requirements.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_scheme.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/unsupported_scheme.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_x402_version.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/invalid_transaction_state.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/unexpected_verify_error.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/unexpected_settle_error.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://zcoldwater.github.io/x402-doctor/errors/settlement_pending.html</loc><lastmod>2026-11-20</lastmod></url>
+</urlset>

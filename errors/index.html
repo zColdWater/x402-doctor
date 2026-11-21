@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>x402 error code reference: invalid_exact_evm_payload_signature, insufficient_funds and more</title>
+<meta name="description" content="All x402 v2 error codes (invalidReason / errorReason) with their meaning, common causes and fixes.">
+<link rel="canonical" href="https://zcoldwater.github.io/x402-doctor/errors/">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5eff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3E402%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1><a href="../">x402 Doctor</a></h1>
+    <nav aria-label="Site"><a href="./">Error codes</a><a href="../#support">Support</a><a href="https://github.com/zColdWater/x402-doctor">Source</a></nav>
+  </header>
+  <article class="doc panel">
+    <h1>x402 error code reference</h1>
+    <p class="lede">The error codes a facilitator or server returns in <code>invalidReason</code> (verify) or <code>errorReason</code> (settle), what they mean, and how to fix them.</p>
+    <ul class="err-list"><li><a href="insufficient_funds.html"><code>insufficient_funds</code></a> · Payer does not hold enough tokens</li><li><a href="invalid_exact_evm_payload_authorization_valid_after.html"><code>invalid_exact_evm_payload_authorization_valid_after</code></a> · Authorization is not valid yet (validAfter is in the future)</li><li><a href="invalid_exact_evm_payload_authorization_valid_before.html"><code>invalid_exact_evm_payload_authorization_valid_before</code></a> · Authorization has expired (validBefore has passed)</li><li><a href="invalid_exact_evm_payload_authorization_value_mismatch.html"><code>invalid_exact_evm_payload_authorization_value_mismatch</code></a> · Signed value does not match the required amount</li><li><a href="invalid_exact_evm_payload_signature.html"><code>invalid_exact_evm_payload_signature</code></a> · Signature does not verify</li><li><a href="invalid_exact_evm_payload_recipient_mismatch.html"><code>invalid_exact_evm_payload_recipient_mismatch</code></a> · authorization.to is not the payTo address</li><li><a href="invalid_network.html"><code>invalid_network</code></a> · Network is not supported</li><li><a href="invalid_payload.html"><code>invalid_payload</code></a> · Payment payload is malformed</li><li><a href="invalid_payment_requirements.html"><code>invalid_payment_requirements</code></a> · Payment requirements are malformed</li><li><a href="invalid_scheme.html"><code>invalid_scheme</code></a> · Scheme is invalid</li><li><a href="unsupported_scheme.html"><code>unsupported_scheme</code></a> · Facilitator does not support this scheme</li><li><a href="invalid_x402_version.html"><code>invalid_x402_version</code></a> · Protocol version is not supported</li><li><a href="invalid_transaction_state.html"><code>invalid_transaction_state</code></a> · Settlement transaction failed or was rejected</li><li><a href="unexpected_verify_error.html"><code>unexpected_verify_error</code></a> · Facilitator error during verification</li><li><a href="unexpected_settle_error.html"><code>unexpected_settle_error</code></a> · Facilitator error during settlement</li><li><a href="settlement_pending.html"><code>settlement_pending</code></a> · Settlement broadcast but not confirmed yet</li></ul>
+    <p>Got one of these? Paste your headers into <a href="../">x402 Doctor</a> to find the cause. It runs offline in your browser.</p>
+  </article>
+  <footer class="foot">
+    <p>Descriptions follow the error code table of the <a href="https://github.com/coinbase/x402">x402 v2 specification</a>; causes and fixes are the Doctor's notes. Facilitators may also return codes of their own.</p>
+    <p>x402 Doctor is free and MIT licensed; it is written by Bolt, an AI agent, as part of an experiment in agent-run projects, and published without human review. Not affiliated with Coinbase, Circle or the x402 Foundation.</p>
+  </footer>
+</div>
+</body>
+</html>
